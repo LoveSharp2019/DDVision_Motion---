@@ -1,0 +1,1195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B7E93AD-48F7-4F86-9482-2321D6F1D10A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VSE</RootNamespace>
+    <AssemblyName>VSE</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\VisionTool.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\VisionTool.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Basler.Pylon">
+      <HintPath>bin\Debug\Basler.Pylon.dll</HintPath>
+    </Reference>
+    <Reference Include="FlyCapture2Managed">
+      <HintPath>bin\Debug\FlyCapture2Managed.dll</HintPath>
+    </Reference>
+    <Reference Include="halcondotnet">
+      <HintPath>bin\Debug\halcondotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="hdevenginedotnet, Version=20.5.0.0, Culture=neutral, PublicKeyToken=4973bed59ddbf2b8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\hdevenginedotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="LightController">
+      <HintPath>bin\Debug\LightController.dll</HintPath>
+    </Reference>
+    <Reference Include="LXCSystem, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\LXCSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="MvCameraControl.Net, Version=3.4.0.1, Culture=neutral, PublicKeyToken=52fddfb3f94be800, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MvCameraControl.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>bin\Debug\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ScintillaNET, Version=3.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ScintillaNET.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="VisionPlus.Core">
+      <HintPath>bin\Debug\VisionPlus.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="VisionPlus.ImageView">
+      <HintPath>bin\Debug\VisionPlus.ImageView.dll</HintPath>
+    </Reference>
+    <Reference Include="VSE.Core">
+      <HintPath>..\VSE.Core\bin\Debug\VSE.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WinFormsUI.Layout">
+      <HintPath>bin\Debug\WinFormsUI.Layout.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="1 Tool\1 ImgLib\01 ImageAcqTool\SDK_Halcon.cs" />
+    <Compile Include="1 Tool\1 ImgLib\01 ImageAcqTool\Win_SDKInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Tool\1 ImgLib\01 ImageAcqTool\Win_SDKInfo.Designer.cs">
+      <DependentUpon>Win_SDKInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Tool\1 ImgLib\01 ImageAcqTool\Win_AcqImageTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Tool\1 ImgLib\01 ImageAcqTool\Win_AcqImageTool.Designer.cs">
+      <DependentUpon>Win_AcqImageTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Tool\1 ImgLib\02 SaveImageTool\SaveImageTool.cs" />
+    <Compile Include="1 Tool\1 ImgLib\02 SaveImageTool\Win_SaveImageTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Tool\1 ImgLib\02 SaveImageTool\Win_SaveImageTool.designer.cs">
+      <DependentUpon>Win_SaveImageTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Tool\1 ImgLib\01 ImageAcqTool\SDK_Base.cs" />
+    <Compile Include="1 Tool\1 ImgLib\03 Binarization\BinarizationTool.cs" />
+    <Compile Include="1 Tool\1 ImgLib\03 Binarization\Win_BinarizationTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Tool\1 ImgLib\03 Binarization\Win_BinarizationTool.Designer.cs">
+      <DependentUpon>Win_BinarizationTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Tool\1 ImgLib\04 Morphology\Win_MorphologyTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Tool\1 ImgLib\04 Morphology\Win_MorphologyTool.Designer.cs">
+      <DependentUpon>Win_MorphologyTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Tool\1 ImgLib\04 Morphology\MorphologyTool.cs" />
+    <Compile Include="1 Tool\1 ImgLib\07 FindROI\FindROI.cs" />
+    <Compile Include="1 Tool\1 ImgLib\07 FindROI\Win_FindROITool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Tool\1 ImgLib\07 FindROI\Win_FindROITool.Designer.cs">
+      <DependentUpon>Win_FindROITool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Tool\1 ImgLib\08 FindRegion\FindRegionTool.cs" />
+    <Compile Include="1 Tool\1 ImgLib\08 FindRegion\Win_FindRegionTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Tool\1 ImgLib\08 FindRegion\Win_FindRegionTool.Designer.cs">
+      <DependentUpon>Win_FindRegionTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Tool\1 ImgLib\09 DefectDetection\DefectDetectionTool.cs" />
+    <Compile Include="1 Tool\1 ImgLib\09 DefectDetection\Win_DefectDetectionTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Tool\1 ImgLib\09 DefectDetection\Win_DefectDetectionTool.Designer.cs">
+      <DependentUpon>Win_DefectDetectionTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Tool\3 Location\01 2DMatchTool\MatchTool.cs" />
+    <Compile Include="1 Tool\3 Location\01 2DMatchTool\Win_MatchTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Tool\3 Location\01 2DMatchTool\Win_MatchTool.Designer.cs">
+      <DependentUpon>Win_MatchTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Tool\3 Location\02 BlobTool\BlobTool.cs" />
+    <Compile Include="1 Tool\3 Location\02 BlobTool\Win_BlobTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Tool\3 Location\02 BlobTool\Win_BlobTool.Designer.cs">
+      <DependentUpon>Win_BlobTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Tool\3 Location\03 FindLine\FindLineTool.cs" />
+    <Compile Include="1 Tool\3 Location\03 FindLine\Win_FindLineTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Tool\3 Location\03 FindLine\Win_FindLineTool.Designer.cs">
+      <DependentUpon>Win_FindLineTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Tool\3 Location\04 FindCircle\FindCircleTool.cs" />
+    <Compile Include="1 Tool\3 Location\04 FindCircle\Win_FindCircleTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Tool\3 Location\04 FindCircle\Win_FindCircleTool.Designer.cs">
+      <DependentUpon>Win_FindCircleTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Tool\3 Location\06 FindMultiLinesCirclesTool\FindMultiLinesCirclesTool.cs" />
+    <Compile Include="1 Tool\3 Location\06 FindMultiLinesCirclesTool\Win_FindMultiLinesCirclesTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Tool\3 Location\06 FindMultiLinesCirclesTool\Win_FindMultiLinesCirclesTool.Designer.cs">
+      <DependentUpon>Win_FindMultiLinesCirclesTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Tool\4 Measurement\01 P2PDistanceTool\PPDistanceTool.cs" />
+    <Compile Include="1 Tool\4 Measurement\01 P2PDistanceTool\Win_PPDistanceTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Tool\4 Measurement\01 P2PDistanceTool\Win_PPDistanceTool.Designer.cs">
+      <DependentUpon>Win_PPDistanceTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Tool\4 Measurement\03 P2LDistanceTool\PLDistanceTool.cs" />
+    <Compile Include="1 Tool\4 Measurement\03 P2LDistanceTool\Win_PLDistanceTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Tool\4 Measurement\03 P2LDistanceTool\Win_PLDistanceTool.Designer.cs">
+      <DependentUpon>Win_PLDistanceTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Tool\4 Measurement\04 L2LAngleTool\LLAngleTool.cs" />
+    <Compile Include="1 Tool\4 Measurement\04 L2LAngleTool\Win_LLAngleTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Tool\4 Measurement\04 L2LAngleTool\Win_LLAngleTool.Designer.cs">
+      <DependentUpon>Win_LLAngleTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Tool\4 Measurement\05 L2LIntersectionTool\LLIntersectTool.cs" />
+    <Compile Include="1 Tool\4 Measurement\05 L2LIntersectionTool\Win_LLIntersectTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Tool\4 Measurement\05 L2LIntersectionTool\Win_LLIntersectTool.Designer.cs">
+      <DependentUpon>Win_LLIntersectTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Tool\4 Measurement\08 RRegionGraySubtractTool\RRegionGraySubtractTool.cs" />
+    <Compile Include="1 Tool\4 Measurement\08 RRegionGraySubtractTool\Win_RRegionGraySubtractTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Tool\4 Measurement\08 RRegionGraySubtractTool\Win_RRegionGraySubtractTool.Designer.cs">
+      <DependentUpon>Win_RRegionGraySubtractTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Tool\6 Logic\VerdictTool.cs" />
+    <Compile Include="1 Tool\6 Logic\Win_VerdictTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Tool\6 Logic\Win_VerdictTool.Designer.cs">
+      <DependentUpon>Win_VerdictTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2 ClassLib\P2PMessage.cs" />
+    <Compile Include="2 ClassLib\Scaner.cs" />
+    <Compile Include="2 ClassLib\TCPClient.cs" />
+    <Compile Include="2 ClassLib\TCPSever.cs" />
+    <Compile Include="3 Win\Win_CCDDisplayLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_CCDDisplayLayout.designer.cs">
+      <DependentUpon>Win_CCDDisplayLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\Win_About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_About.designer.cs">
+      <DependentUpon>Win_About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\Win_IOConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_IOConfig.designer.cs">
+      <DependentUpon>Win_IOConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2 ClassLib\Scheme.cs" />
+    <Compile Include="1 Tool\1 ImgLib\01 ImageAcqTool\Win_FromDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Tool\1 ImgLib\01 ImageAcqTool\Win_FromDevice.designer.cs">
+      <DependentUpon>Win_FromDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Tool\1 ImgLib\01 ImageAcqTool\Win_FromLocal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Tool\1 ImgLib\01 ImageAcqTool\Win_FromLocal.Designer.cs">
+      <DependentUpon>Win_FromLocal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Tool\1 ImgLib\01 ImageAcqTool\AcqImageTool.cs" />
+    <Compile Include="1 Tool\1 ImgLib\06 ImageDecomposition\ColorToRGBTool.cs" />
+    <Compile Include="1 Tool\1 ImgLib\06 ImageDecomposition\Win_ColorToRGBTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1 Tool\1 ImgLib\06 ImageDecomposition\Win_ColorToRGBTool.designer.cs">
+      <DependentUpon>Win_ColorToRGBTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1 Tool\1 ImgLib\01 ImageAcqTool\SDK_Basler.cs" />
+    <Compile Include="1 Tool\1 ImgLib\01 ImageAcqTool\SDK_HIKVision.cs" />
+    <Compile Include="1 Tool\1 ImgLib\01 ImageAcqTool\SDK_PointGrey.cs" />
+    <Compile Include="2 ClassLib\PLCComm.cs" />
+    <Compile Include="2 ClassLib\Project.cs" />
+    <Compile Include="2 ClassLib\ToolBase.cs" />
+    <Compile Include="3 Win\SettingPages\Win_EngineManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\SettingPages\Win_EngineManager.designer.cs">
+      <DependentUpon>Win_EngineManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\Win_InputMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_InputMessage.designer.cs">
+      <DependentUpon>Win_InputMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\Win_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_Login.designer.cs">
+      <DependentUpon>Win_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\Win_GlobalVariable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_GlobalVariable.designer.cs">
+      <DependentUpon>Win_GlobalVariable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\Win_DeviceManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_DeviceManager.designer.cs">
+      <DependentUpon>Win_DeviceManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2 ClassLib\Machine.cs" />
+    <Compile Include="2 ClassLib\Permission.cs" />
+    <Compile Include="2 ClassLib\Regiest.cs" />
+    <Compile Include="3 Win\Win_ImageWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_ImageWindow.Designer.cs">
+      <DependentUpon>Win_ImageWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\Win_JobInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_JobInfo.Designer.cs">
+      <DependentUpon>Win_JobInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\Win_LightController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_LightController.Designer.cs">
+      <DependentUpon>Win_LightController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\Win_Log.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_Log.Designer.cs">
+      <DependentUpon>Win_Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\Win_Regiest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_Regiest.Designer.cs">
+      <DependentUpon>Win_Regiest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\Win_TCPServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_TCPServer.Designer.cs">
+      <DependentUpon>Win_TCPServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\Win_PLCComm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_PLCComm.Designer.cs">
+      <DependentUpon>Win_PLCComm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\Win_Scaner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_Scaner.designer.cs">
+      <DependentUpon>Win_Scaner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\Win_Serial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_Serial.designer.cs">
+      <DependentUpon>Win_Serial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2 ClassLib\Serial.cs" />
+    <Compile Include="2 ClassLib\ShareMemProH.cs" />
+    <Compile Include="3 Win\Win_Monitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_Monitor.Designer.cs">
+      <DependentUpon>Win_Monitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2 ClassLib\Start.cs" />
+    <Compile Include="2 ClassLib\Configuration.cs" />
+    <Compile Include="3 Win\SettingPages\Win_GeneralSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\SettingPages\Win_GeneralSettings.Designer.cs">
+      <DependentUpon>Win_GeneralSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\SettingPages\Win_ProjetSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\SettingPages\Win_ProjetSettings.Designer.cs">
+      <DependentUpon>Win_ProjetSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\SettingPages\Win_PuginSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\SettingPages\Win_PuginSettings.Designer.cs">
+      <DependentUpon>Win_PuginSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2 ClassLib\Job.cs" />
+    <Compile Include="2 ClassLib\ToolInfo.cs" />
+    <Compile Include="3 Win\Win_ComConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_ComConfig.Designer.cs">
+      <DependentUpon>Win_ComConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\SettingPages\Win_AdvancedSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\SettingPages\Win_AdvancedSettings.Designer.cs">
+      <DependentUpon>Win_AdvancedSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\Win_TCPClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_TCPClient.Designer.cs">
+      <DependentUpon>Win_TCPClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\Win_ToolBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_ToolBox.Designer.cs">
+      <DependentUpon>Win_ToolBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\SettingPages\Win_UserManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\SettingPages\Win_UserManager.Designer.cs">
+      <DependentUpon>Win_UserManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\Win_Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_Setting.Designer.cs">
+      <DependentUpon>Win_Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\Win_Job.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_Job.Designer.cs">
+      <DependentUpon>Win_Job.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3 Win\Win_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3 Win\Win_Main.Designer.cs">
+      <DependentUpon>Win_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2 ClassLib\GlobelVariable.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="1 Tool\1 ImgLib\01 ImageAcqTool\Win_SDKInfo.resx">
+      <DependentUpon>Win_SDKInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Tool\1 ImgLib\01 ImageAcqTool\Win_AcqImageTool.resx">
+      <DependentUpon>Win_AcqImageTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Tool\1 ImgLib\01 ImageAcqTool\Win_FromDevice.resx">
+      <DependentUpon>Win_FromDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Tool\1 ImgLib\01 ImageAcqTool\Win_FromLocal.resx">
+      <DependentUpon>Win_FromLocal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Tool\1 ImgLib\03 Binarization\Win_BinarizationTool.resx">
+      <DependentUpon>Win_BinarizationTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Tool\1 ImgLib\04 Morphology\Win_MorphologyTool.resx">
+      <DependentUpon>Win_MorphologyTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Tool\1 ImgLib\06 ImageDecomposition\Win_ColorToRGBTool.resx">
+      <DependentUpon>Win_ColorToRGBTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Tool\1 ImgLib\02 SaveImageTool\Win_SaveImageTool.resx">
+      <DependentUpon>Win_SaveImageTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Tool\1 ImgLib\07 FindROI\Win_FindROITool.resx">
+      <DependentUpon>Win_FindROITool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Tool\1 ImgLib\08 FindRegion\Win_FindRegionTool.resx">
+      <DependentUpon>Win_FindRegionTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Tool\1 ImgLib\09 DefectDetection\Win_DefectDetectionTool.resx">
+      <DependentUpon>Win_DefectDetectionTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Tool\3 Location\01 2DMatchTool\Win_MatchTool.resx">
+      <DependentUpon>Win_MatchTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Tool\3 Location\02 BlobTool\Win_BlobTool.resx">
+      <DependentUpon>Win_BlobTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Tool\3 Location\03 FindLine\Win_FindLineTool.resx">
+      <DependentUpon>Win_FindLineTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Tool\3 Location\04 FindCircle\Win_FindCircleTool.resx">
+      <DependentUpon>Win_FindCircleTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Tool\3 Location\06 FindMultiLinesCirclesTool\Win_FindMultiLinesCirclesTool.resx">
+      <DependentUpon>Win_FindMultiLinesCirclesTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Tool\4 Measurement\01 P2PDistanceTool\Win_PPDistanceTool.resx">
+      <DependentUpon>Win_PPDistanceTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Tool\4 Measurement\03 P2LDistanceTool\Win_PLDistanceTool.resx">
+      <DependentUpon>Win_PLDistanceTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Tool\4 Measurement\04 L2LAngleTool\Win_LLAngleTool.resx">
+      <DependentUpon>Win_LLAngleTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Tool\4 Measurement\05 L2LIntersectionTool\Win_LLIntersectTool.resx">
+      <DependentUpon>Win_LLIntersectTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Tool\4 Measurement\08 RRegionGraySubtractTool\Win_RRegionGraySubtractTool.resx">
+      <DependentUpon>Win_RRegionGraySubtractTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1 Tool\6 Logic\Win_VerdictTool.resx">
+      <DependentUpon>Win_VerdictTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_CCDDisplayLayout.resx">
+      <DependentUpon>Win_CCDDisplayLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_About.resx">
+      <DependentUpon>Win_About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_IOConfig.resx">
+      <DependentUpon>Win_IOConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\SettingPages\Win_EngineManager.resx">
+      <DependentUpon>Win_EngineManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_InputMessage.resx">
+      <DependentUpon>Win_InputMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_Login.resx">
+      <DependentUpon>Win_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_ComConfig.resx">
+      <DependentUpon>Win_ComConfig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_ImageWindow.resx">
+      <DependentUpon>Win_ImageWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_JobInfo.resx">
+      <DependentUpon>Win_JobInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_Monitor.resx">
+      <DependentUpon>Win_Monitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_LightController.resx">
+      <DependentUpon>Win_LightController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_Log.resx">
+      <DependentUpon>Win_Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_PLCComm.resx">
+      <DependentUpon>Win_PLCComm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_GlobalVariable.resx">
+      <DependentUpon>Win_GlobalVariable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_DeviceManager.resx">
+      <DependentUpon>Win_DeviceManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_Regiest.resx">
+      <DependentUpon>Win_Regiest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_TCPServer.resx">
+      <DependentUpon>Win_TCPServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_Scaner.resx">
+      <DependentUpon>Win_Scaner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_Serial.resx">
+      <DependentUpon>Win_Serial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\SettingPages\Win_GeneralSettings.resx">
+      <DependentUpon>Win_GeneralSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\SettingPages\Win_ProjetSettings.resx">
+      <DependentUpon>Win_ProjetSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\SettingPages\Win_PuginSettings.resx">
+      <DependentUpon>Win_PuginSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\SettingPages\Win_AdvancedSettings.resx">
+      <DependentUpon>Win_AdvancedSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_TCPClient.resx">
+      <DependentUpon>Win_TCPClient.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_ToolBox.resx">
+      <DependentUpon>Win_ToolBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\SettingPages\Win_UserManager.resx">
+      <DependentUpon>Win_UserManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_Setting.resx">
+      <DependentUpon>Win_Setting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_Job.resx">
+      <DependentUpon>Win_Job.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3 Win\Win_Main.resx">
+      <DependentUpon>Win_Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <Fakes Include="Fakes\FastColoredTextBox.fakes" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Resources\On.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Run.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Region.png" />
+    <None Include="Resources\String.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SubImageTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OutputTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FixtureTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FindLineTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FindCircleTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CoorTransTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShapeMatchTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GrayMatchTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogicTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnknownTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FitCircleTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FitLineTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OCRTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2DUncodeTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BarCodeTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpCameraRobotAlignTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorTransGrayTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColorToRGBTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedLight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YellowLight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Debug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LightTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Robot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreatePosTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarkTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LineCalib.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RegionFeature.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageProProcessingTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveImageTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dimension CalibTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhileTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreateROITool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenSegmentTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RegionArrayTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwoPointCenterTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ScanerTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scaner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImageAcqTool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sever.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rotate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoveDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoveUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\偏移.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\max.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\min.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\勾选.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\去勾选.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\复选框.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\去复选框.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\上一个 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\上一个 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\上一个 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\上一个.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\查找 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\关.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\开.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\按钮 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\按钮 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\按钮.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\电力传动机械部件.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\电力传动机械部件0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\图像 %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\复位 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\复位.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\停止.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\参数配置 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\参数配置.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\查找3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\上上.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\下下.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\上一个000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\字符.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\底部对齐.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\顶部对齐.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\组合表格.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\分支.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\循环.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\扫码枪.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\扫码枪 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\添加 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\添加 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\服务器.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\客户端.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\光照度-允乐.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\急速退款 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\急速退款.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\图片 .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\图片 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\图片 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\图片 %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\图片 %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\图片 %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\照片 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\照片 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\照片 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\照片.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\图片 %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\图片 copy 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\图片 %2811%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\图片.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\查找.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\图像_images17~2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\图像_images17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\图像.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\放大 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\斜线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\分割斜线.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\下 移.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\上 移1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删 除4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\圆.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新建文件夹\正方形 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新建文件夹\正方形 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新建文件夹\正方形 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新建文件夹\正方形 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新建文件夹\正方形 %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新建文件夹\正方形 %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新建文件夹\正方形 %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新建文件夹\正方形.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\发.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\收 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\收.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\发送区.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\接收区.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\阵列.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\输出管理.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\显示模版.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\展示板.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\展示B1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\首页展示.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\大屏展示.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui\数据预处理.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui\匹配.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui\量测分析.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="1 Tool\1 ImgLib\05 ImageFiltering\" />
+    <Folder Include="1 Tool\2 CoordTrans\01 CalibCheckerboardTool\" />
+    <Folder Include="1 Tool\2 CoordTrans\02 CalibNPointTool\" />
+    <Folder Include="1 Tool\2 CoordTrans\03 TransformTool\" />
+    <Folder Include="1 Tool\3 Location\05 FindCornerTool\" />
+    <Folder Include="1 Tool\4 Measurement\02 P2CDistanceTool\" />
+    <Folder Include="1 Tool\4 Measurement\06 L2CIntersectionTool\" />
+    <Folder Include="1 Tool\4 Measurement\07 C2CIntersectionTool\" />
+    <Folder Include="1 Tool\5 CharBarcode\OCRTool\" />
+    <Folder Include="1 Tool\5 CharBarcode\ReadingCodeTool\" />
+    <Folder Include="1 Tool\7 CreatObject\" />
+    <Folder Include="1 Tool\8 Communication\" />
+    <Folder Include="1 Tool\NewFolder1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui\启动A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui\启动B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui\复位A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui\复位B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui\停止A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui\停止B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui\暂停A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui\暂停B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon1.ico" />
+    <None Include="Resources\ui\Icon1.ico" />
+    <Content Include="Icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VSECtrl\VControls.csproj">
+      <Project>{6d2088cb-161b-47fb-9c35-0ee8de61a3df}</Project>
+      <Name>VControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

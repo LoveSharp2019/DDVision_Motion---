@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F6D2AE3-2394-4546-B616-0396FB810D4E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lxc.VisionPlus.ImageView</RootNamespace>
+    <AssemblyName>VisionPlus.ImageView</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="halcondotnet, Version=20.5.0.0, Culture=neutral, PublicKeyToken=4973bed59ddbf2b8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\halcondotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="LXCSystem">
+      <HintPath>..\..\CommonModule\LXCSystem\bin\Debug\LXCSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VisionPlus.Core">
+      <HintPath>..\VisionPlus\bin\Debug\VisionPlus.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="VSE.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\VSE.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HWndMessage.cs" />
+    <Compile Include="Config\Circle.cs" />
+    <Compile Include="Config\CircularArc.cs" />
+    <Compile Include="Config\HRegionEntry.cs" />
+    <Compile Include="Config\Line.cs" />
+    <Compile Include="DisInfoWin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DisInfoWin.designer.cs">
+      <DependentUpon>DisInfoWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FullScreen.Designer.cs">
+      <DependentUpon>FullScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImgView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImgView.designer.cs">
+      <DependentUpon>ImgView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ROICalipersCircle.cs" />
+    <Compile Include="Model\ROICalipersLine.cs" />
+    <Compile Include="Model\ROICoordinate.cs" />
+    <Compile Include="Model\ROIImage.cs" />
+    <Compile Include="Model\Shape.cs" />
+    <Compile Include="Model\ROIEllipse.cs" />
+    <Compile Include="Model\GraphicsContext.cs" />
+    <Compile Include="Model\HObjectEntry.cs" />
+    <Compile Include="Model\HWndCtrl.cs" />
+    <Compile Include="Model\IViewWindow.cs" />
+    <Compile Include="Model\ROI.cs" />
+    <Compile Include="Model\ROICircle.cs" />
+    <Compile Include="Model\ROICircularArc.cs" />
+    <Compile Include="Model\ROIController.cs" />
+    <Compile Include="Model\RoiData.cs" />
+    <Compile Include="Model\ROILine.cs" />
+    <Compile Include="Model\ROINurbs.cs" />
+    <Compile Include="Model\ROIRectangle1.cs" />
+    <Compile Include="Model\ROIRectangle2.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Config\Rectangle1.cs" />
+    <Compile Include="Config\Rectangle2.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SetWin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SetWin.designer.cs">
+      <DependentUpon>SetWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThresholdPlot.cs" />
+    <Compile Include="ThresholdUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThresholdUnit.designer.cs">
+      <DependentUpon>ThresholdUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewWindow.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DisInfoWin.resx">
+      <DependentUpon>DisInfoWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FullScreen.resx">
+      <DependentUpon>FullScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImgView.resx">
+      <DependentUpon>ImgView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetWin.resx">
+      <DependentUpon>SetWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThresholdUnit.resx">
+      <DependentUpon>ThresholdUnit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a0imo-jjveq-001.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
